@@ -110,23 +110,23 @@ Here are some sample GIFs that show how the model was converging:
 
 1. Calvin and Hobbes swimming in the pool:
 
-   ![Calvin and Hobbes swimming](./group_0.gif)
+   ![Calvin and Hobbes swimming](GIFs/group_0.gif) 
 
 2. Calvin and Hobbes climbing the tree:
 
-   ![Calvin and Hobbes climbing](./group_1.gif)
+   ![Calvin and Hobbes climbing](GIFs/group_1.gif)
 
 3. Calvin and Hobbes talking about quitting school:
 
-   ![Calvin and Hobbes quitting school](./group_2.gif)
+   ![Calvin and Hobbes quitting school](GIFs/group_2.gif)
 
 4. Calvin and Hobbes eating dinner:
 
-   ![Calvin and Hobbes eating](./group_3.gif)
+   ![Calvin and Hobbes eating](GIFs/group_3.gif)
 
 5. Calvin and Hobbes go shopping:
 
-   ![Calvin and Hobbes shopping](./group_4.gif)
+   ![Calvin and Hobbes shopping](GIFs/group_4.gif)
 
 ---
 
