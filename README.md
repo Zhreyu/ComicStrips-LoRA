@@ -1,7 +1,7 @@
 
 # Calvin and Hobbes Comic Strip Generation - LoRA Fine-Tuning on Flux Model
 
-This project fine-tunes the **Flux.1-dev** model using **LoRA (Low-Rank Adaptation)** to generate Calvin and Hobbes comic strip images. The entire process includes scraping data, annotating the dataset using a vision model, and fine-tuning the model for image generation.
+This project fine-tunes the **Flux.1-dev** model using **LoRA (Low-Rank Adaptation)** to generate Calvin and Hobbes comic strip images. The entire process includes scraping data, annotating the dataset using a vision model, and fine-tuning the model for image generation. The fine-tuned model is available [here](https://huggingface.co/zhreyu/ComicStrips-Lora-Fluxdev), and the dataset used for training will be published soon.
 
 ---
 
@@ -51,7 +51,7 @@ To fine-tune the model, the **AI Toolkit** repository (with submodules) is alrea
 To set up the environment:
 
 ```bash
-cd your-repo
+cd ComicStrips-LoRA/
 python -m venv venv
 source venv/bin/activate
 pip install torch
@@ -132,4 +132,4 @@ Here are some sample GIFs that show how the model was converging:
 
 ## Acknowledgements
 
-Special thanks to the creators of the **AI Toolkit** for providing the tools necessary to fine-tune the Flux.1-dev model using LoRA. Their contributions have been instrumental in the success of this project.
+Special thanks to the creators of the **AI Toolkit** for providing the tools necessary to fine-tune the Flux.1-dev model using LoRA. 
