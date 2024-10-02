@@ -19,7 +19,7 @@ jobs:
       - name: Update README.md
         run: |
           DOWNLOADS=$(cat download_count.txt)
-          # Find and update only the download badge link, not the "Total Downloads" text
+          # Find and update the download badge link
           sed -i 's/https:\/\/img.shields.io\/badge\/downloads-[0-9]*-blue/https:\/\/img.shields.io\/badge\/downloads-'${DOWNLOADS}'-blue/' README.md
 
       - name: Commit changes
