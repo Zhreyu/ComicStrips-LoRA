@@ -19,7 +19,8 @@ jobs:
       - name: Update README.md
         run: |
           DOWNLOADS=$(cat download_count.txt)
-          sed -i 's/Total Downloads: \[!\[Downloads\](https:\/\/img.shields.io\/badge\/downloads-[0-9]*-blue)\]/Total Downloads: \[!\[Downloads\](https:\/\/img.shields.io\/badge\/downloads-'${DOWNLOADS}'-blue)\]/' README.md
+          # Find and update only the download badge link, not the "Total Downloads" text
+          sed -i 's/https:\/\/img.shields.io\/badge\/downloads-[0-9]*-blue/https:\/\/img.shields.io\/badge\/downloads-'${DOWNLOADS}'-blue/' README.md
 
       - name: Commit changes
         run: |
