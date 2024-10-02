@@ -12,6 +12,9 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v2
 
+      - name: Install jq
+        run: sudo apt-get install jq  # Install jq to process JSON
+
       - name: Get Hugging Face Model Download Count
         run: |
           curl -s https://huggingface.co/api/models/zhreyu/ComicStrips-Lora-Fluxdev | jq '.downloads' > download_count.txt
