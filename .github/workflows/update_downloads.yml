@@ -12,34 +12,20 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v2
 
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.x'
-
-      - name: Install dependencies
+      - name: Install jq
+        run: sudo apt-get install jq  # Install jq to process JSON
+      - name: Get Hugging Face Model Download Count
         run: |
-          pip install huggingface_hub
-
-      - name: Get Hugging Face Model Download Count (All-Time)
-        run: |
-          python -c "
-from huggingface_hub import model_info
-model = model_info('zhreyu/ComicStrips-Lora-Fluxdev', expand=['downloadsAllTime'])
-with open('download_count.txt', 'w') as f:
-    f.write(str(model.downloads_all_time))
-          "
-
-      - name: Update README.md with All-Time Downloads
+          curl -s https://huggingface.co/api/models/zhreyu/ComicStrips-Lora-Fluxdev | jq '.downloads' > download_count.txt
+      - name: Update README.md
         run: |
           DOWNLOADS=$(cat download_count.txt)
-          # Find and update the download badge link with all-time downloads
+          # Find and update the download badge link
           sed -i 's/https:\/\/img.shields.io\/badge\/downloads-[0-9]*-blue/https:\/\/img.shields.io\/badge\/downloads-'${DOWNLOADS}'-blue/' README.md
-
       - name: Commit changes
         run: |
           git config --global user.name 'github-actions'
           git config --global user.email 'actions@github.com'
           git add README.md
-          git commit -m "Update Hugging Face model downloads (All-Time)"
+          git commit -m "Update Hugging Face model downloads"
           git push
