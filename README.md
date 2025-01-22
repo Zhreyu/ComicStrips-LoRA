@@ -4,7 +4,7 @@
 This project fine-tunes the **Flux.1-dev** model using **LoRA (Low-Rank Adaptation)** to generate Calvin and Hobbes comic strip images. The entire process includes scraping data, annotating the dataset using a vision model, and fine-tuning the model for image generation. The fine-tuned model is available [here](https://huggingface.co/zhreyu/ComicStrips-Lora-Fluxdev), and the dataset used for training will be published soon.
 You can check try this model at [HuggingFace Spaces](https://huggingface.co/spaces/zhreyu/zhreyu-ComicStrips-Lora-Fluxdev)
 
-[![Downloads](https://img.shields.io/badge/downloads-2570-blue)](https://huggingface.co/zhreyu/ComicStrips-Lora-Fluxdev)
+[![Downloads](https://img.shields.io/badge/downloads-10k-blue)](https://huggingface.co/zhreyu/ComicStrips-Lora-Fluxdev)
 
 ## Project Overview
 
